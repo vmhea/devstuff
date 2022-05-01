@@ -19,7 +19,7 @@ def main():
     current_date = current_date.strftime('%m-%d-%Y')
 
     report_dir = os.path.abspath('C:/Users/Heath/PycharmProjects/workReporter') + '/'
-    report_daily = 'report_' + current_date + '.md'
+    report_daily = f'report_{current_date}.md'
     report_archive = 'hog_archive.md'
 
     # if exists read daily report file

@@ -8,7 +8,7 @@ def main():
     current_date = current_date.strftime('%m-%d-%Y')
 
     report_dir = os.path.abspath('C:/Users/Heath/PycharmProjects/workReporter') + '/'
-    report_daily = 'report_' + current_date + '.md'
+    report_daily = f'report_{current_date}.md'
 
     if not os.path.exists(report_dir + report_daily):
         print(f'File does not exist, creating {report_daily} in {report_dir}')
@@ -16,7 +16,7 @@ def main():
         rd.write('### ' + current_date + '\n')
         rd.close()
     else:
-        print('File does exist, found ' + report_daily + 'in ' + report_dir[:-1])
+        print(f'File does exist, found {report_daily} in {report_dir[:-1]}')
         print('Exiting')
         exit()
 
