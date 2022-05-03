@@ -13,7 +13,7 @@ def main():
     if not os.path.exists(report_dir + report_daily):
         print(f'File does not exist, creating {report_daily} in {report_dir}')
         rd = open(report_dir + report_daily, 'x')
-        rd.write('### ' + current_date + '\n')
+        rd.write(f'### {current_date}\n')
         rd.close()
     else:
         print(f'File does exist, found {report_daily} in {report_dir[:-1]}')
