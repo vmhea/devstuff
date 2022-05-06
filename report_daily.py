@@ -1,4 +1,4 @@
-import os.path
+import os
 import datetime
 
 
@@ -7,7 +7,7 @@ def main():
     current_date = datetime.date.today()
     current_date = current_date.strftime('%m-%d-%Y')
 
-    report_dir = os.path.abspath('C:/Users/Heath/PycharmProjects/workReporter') + '/'
+    report_dir = os.path.abspath('/home/ANT.AMAZON.COM/vernehel/Documents/notes/work') + '/'
     report_daily = f'report_{current_date}.md'
 
     if not os.path.exists(report_dir + report_daily):

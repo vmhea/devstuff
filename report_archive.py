@@ -34,7 +34,7 @@ def main():
     current_date = datetime.date.today()
     current_date = current_date.strftime('%m-%d-%Y')
 
-    report_dir = os.path.abspath('C:/Users/Heath/PycharmProjects/workReporter') + '/'
+    report_dir = os.path.abspath('/home/ANT.AMAZON.COM/vernehel/Documents/notes/work') + '/'
 
     report_daily_name = f'report_{current_date}.md'
     report_daily_file = report_dir + report_daily_name
@@ -67,9 +67,10 @@ def main():
             pyperclip.copy(''.join(daily_list[1:])[:-2])
             print(f'{report_daily_name} copied to clipboard')
 
-            # delete original report_archive, rename new one to replace old
+            # delete daily report and original report_archive, rename new one to replace old
             os.remove(report_archive_file)
             os.rename(report_archive_file[:-3] + '.tmp', report_archive_file)
+            os.remove(report_daily_file)
             print(f'{report_archive_name} updated with report')
 
         else:
